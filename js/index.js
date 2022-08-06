@@ -86,8 +86,10 @@ document.getElementById('chaoo').onclick=chaohoi;
 //nhập số nguyên xuất ra số chẳn lẻ.
 function xuatchanle() {
     var songuyen1 = document.getElementById ('songuyen11').value;
-   
-    if ( songuyen1% 2==0) {
+    var songuyen2 = document.getElementById ('songuyen12').value;
+    var songuyen3 = document.getElementById ('songuyen13').value;
+    
+    if ( songuyen1 &&songuyen2 && songuyen3% 2==0) {
         document.getElementById('solechan').innerHTML='số chẳn'
     }else {
         document.getElementById('solechan').innerHTML='số lẻ' 
