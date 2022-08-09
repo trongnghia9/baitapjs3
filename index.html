@@ -1,73 +1,128 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
 
-<body>
-    <div class="container">
-        <h3>Xuất số nguyên theo thứ tự tăng dần</h3>
-        <input type="number" id="songuyen1" placeholder="nhập số thứ nhất."> <br>
-        <input type="number" id="songuyen2" placeholder="nhập số thứ hai."> <br>
-        <input type="number" id="songuyen3" placeholder="nhập số thứ ba."> <br>
-        <button id="xuatsonguye">Xuất</button> <br>
-        <p id="xuatso"></p>
+    <div class="container w-50  mt-5 form" style="margin-bottom: 500px;">
+      <h3 style="text-align: center;">Tính ngày tháng năm</h3>
+        <div class="row">
+          <div class="form-group col-4">
+            <input type="number" class="form-control" id="day" placeholder="Nhập ngày">
+          </div>
+          <div class="form-group col-4">
+            <input type="number" class="form-control" id="month" placeholder="Nhập tháng">
+          </div>
+          <div class="form-group col-4">
+            <input type="number" class="form-control" id="year" placeholder="Nhập năm">
+          </div>
+        </div>
+      <div class="row">
+        <div class="form-group col-6">
+          <button id="btnNgayHomQua" class="btn btn-primary">Ngày hôm qua</button>
+        </div>
+        <div class="form-group col-6">
+          <button id="btnNgayMai" class="btn btn-primary">Ngày mai</button>
+        </div>
+      </div>
+      <div class="result1">
+          <p id="txtResult" class="alert alert-danger"></p>
+      </div>
+      <hr>
+      <h3 class="text-center"> Tính Ngày trong năm</h3>
+      <div class="row">
+        <div class="form-group col-4">
+          <input type="text" class="form-control" id="month1" placeholder="Nhập tháng">
+        </div>
+        <div class="form-group col-4">
+          <input type="text" class="form-control" id="year1" placeholder="Nhập năm">
+        </div>
+        <div class="form-group col-4">
+          <button class="btn btn-success" id="btnTinhNgay">Tính</button>
+        </div>
+      </div>
+      <div>
+        <p id="txtResult1" class="alert alert-info"></p>
+      </div>
+      <hr>
 
+      <h3 class="text-center alert alert-success" >Đọc số có 3 chữ số</h3>
+      <div class="row mt-5">
+        <div class="form-group col-6">
+            <input type="text" class="form-control" id="numberInput" placeholder="nhập số có 3 chữ số">
+        </div>
+        <div class="form-group col-6">
+          <button class="btn btn-success" id="btnDocSo">Nhấn tui đi!</button>
+      </div>
+      </div>
+      <p id="txtResult2" class="alert alert-success"></p>
+      <hr>
+      
+        <div class="form-group">
+          <h3 class="text-center alert alert-danger">Tính toạ độ sinh viên xa nhất</h3>
+          <div class="row">
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="ten1" placeholder="nhập tên sv 1">
+            </div>
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="nhapX1" placeholder="toạ độ x">
+            </div>
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="nhapXy1" placeholder="toạ độ y">
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="ten2"placeholder="nhập tên sv 2">
+            </div>
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="nhapX2" placeholder="toạ độ x">
+            </div>
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="nhapXy2" placeholder="toạ độ y">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="ten3" placeholder="nhập tên sv 3">
+            </div>
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="nhapX3" placeholder="toạ độ x">
+            </div>
+            <div class="form-item col-4">
+              <input type="text" class="form-control" id="nhapXy3" placeholder="toạ độ y">
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="form-group col-4">
+              <input type="text" class="form-control" id="truongHocX" placeholder="Nhập toạ độ trường x">
+            </div>
+            <div class="form-group col-4">
+              <input type="text" class="form-control" id="truongHocY" placeholder="Nhập toạ độ trường y">
+            </div>
+            <div class="form-group col-4"></div>
+          </div>
+          <button class="btn btn-success" id="tinhDuongThangD">Tìm</button>
+          <p id="txtResult3" class="alert alert-info"></p>
+        </div>
+     
     </div>
+   
 
-
-
-    <hr style="background-color:green;">
-    <div class="container w-25 py-5">
-        <h3>Chào hỏi thành viên trong gia đình</h3>
-        <input type="text" id="ten" placeholder="nhập tên của bạn."> <br>
-        <button id="chaoo">Chào</button> <br>
-        <p id="chaoban"></p>
-
-
-
-    </div>
-
-    <hr style="background-color:green;">
-    <div class="container w-25 py-5">
-        <h3>nhập số nguyên xuất ra số chẳn lẻ.</h3>
-        <input type="number" id="songuyen11" placeholder="nhập số nguyên."> <br>
-        <input type="number" id="songuyen12" placeholder="nhập số nguyên."> <br>
-        <input type="number" id="songuyen13" placeholder="nhập số nguyên."> <br>
-        <button id="xuatchanle">Xuất</button> <br>
-        xuất số chẳn và lẻ : <span id="solechan"></span>
-
-
-        <hr style="background-color:green;">
-
-
-
-
-<div class="w25 py-5">
-    <h3>tính tam giác</h3>
-    <input type="number"  id="tamgiacvuong"> <br>
-    <input type="number"  id="tamgiaccan"> <br>
-    <input type="number"  id="tamgiacdeu"> <br>
-    <button id="tamgiac">tính</button>
-    <span id="tamgiacgi" ></span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./js/index.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
